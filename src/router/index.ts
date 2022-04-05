@@ -12,6 +12,14 @@ const routes: Array<RouteRecordRaw> = [
   // 异常页必须放在路由匹配规则的最后
   // ...exceptionRoutes,
   {
+    path: '/',
+    name: 'test',
+    meta: {
+      title: '测试页',
+    },
+    component: () => import('@/views/test/index.vue'),
+  },
+  {
     path: '/login',
     name: 'login',
     meta: {
