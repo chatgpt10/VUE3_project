@@ -27,6 +27,14 @@ const routes: Array<RouteRecordRaw> = [
     },
     component: () => import('@/views/home/index.vue'),
   },
+  {
+    path: '/tree',
+    name: 'tree',
+    meta: {
+      title: '树形测试',
+    },
+    component: () => import('@/views/tree/tree.vue'),
+  },
 ];
 
 console.log(routes);
