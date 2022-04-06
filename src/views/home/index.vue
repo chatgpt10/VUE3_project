@@ -12,7 +12,7 @@
 // 引入插件封装的svg组件
 import newYear from '@/assets/images/newYear.svg'
 // 引入pinia数据
-import userInfo from '@/store/userInfo'
+import { userInfo } from '@/store/modules/userInfo'
 const myUserInfo = userInfo();
 
 function btnChangeAge() {

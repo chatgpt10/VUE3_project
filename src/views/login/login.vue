@@ -36,25 +36,22 @@
 import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import type { ElForm } from 'element-plus'
+import { userInfo } from '@/store/index';
+const myUserInfo = userInfo();
 type FormInstance = InstanceType<typeof ElForm>
 const formRef = ref<FormInstance>()
 // 表单
 const form = reactive({
-  phoneNumber: '',
-  nickName: '',
-  name: '',
+  phoneNumber: '13849427376',
+  nickName: '达利园',
+  name: '小面包',
   age: 18
 })
 
 // 自定义校验规则 校验手机号码
 
-// function validatePhone(rule: any, value: any, callback: any) {
-//   console.log(value);
 
-// }
 const validatePhone = (rule: any, value: any, callback: any) => {
-  console.log(value);
-
   if (value === '') {
     callback(new Error('手机号不可为空'))
   } else if (value.charAt(0) !== '1') {
@@ -87,19 +84,32 @@ const rules = reactive({
 
 })
 
-
 // 登陆按钮
 const router = useRouter()
 const submitForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return
   formEl.validate((valid) => {
     if (valid) {
-      router.push('/home')
+      login();
     } else {
       console.log('error submit!')
       return false
     }
   })
+}
+
+// 登录
+async function login() {
+  console.log("表单的数据", form);
+  try {
+    // console.log(myUserInfo.name);
+
+    const loginRes = await myUserInfo.login(form);
+    router.push('/home')
+  } catch (e) {
+    console.error('登录出错')
+
+  }
 }
 </script>
 
