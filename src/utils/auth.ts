@@ -1,5 +1,5 @@
 // token 处理
-const TokenKey ='fast-token';
+const TokenKey ='my_vue3_token';
 const TokenPrefix ='Bearer'; //prefix  token的前缀 这里是Bearer
 
 const isLogin=()=>{
