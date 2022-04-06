@@ -151,7 +151,7 @@ const submitForm = (formEl: FormInstance | undefined) => {
     position: absolute;
     right: 100px;
     top: 150px;
-    width: 100px;
+    width: 50px;
     height: 300px;
     background-color: black;
   }
