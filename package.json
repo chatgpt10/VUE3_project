@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.26.0",
-    "element-plus": "^2.0.5",
+    "element-plus": "^2.2.9",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.11",
     "vue": "^3.2.25",

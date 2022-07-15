@@ -4,12 +4,12 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es/el-button')['default']
-    ElForm: typeof import('element-plus/es/el-form')['default']
-    ElFormItem: typeof import('element-plus/es/el-form-item')['default']
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElFrom: typeof import('element-plus/es')['ElFrom']
     ElFromItem: typeof import('element-plus/es')['ElFromItem']
-    ElInput: typeof import('element-plus/es/el-input')['default']
+    ElInput: typeof import('element-plus/es')['ElInput']
     ElTabPane: typeof import('element-plus/es/el-tab-pane')['default']
     ElTabs: typeof import('element-plus/es/el-tabs')['default']
     ElTree: typeof import('element-plus/es/el-tree')['default']
