@@ -1,6 +1,11 @@
 # Vue 3 + Typescript + Vite
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# vue3模板
+Vue3 + ts + js + Vite2.x + ElementPlus + Sass + Axios + VueRouter 4.x + Pinia... 
+
+# error
+自动加载组件报错：在页面中写错组件后仍会自动加载相关的组件在components.d.ts中，即使删除报错代码后再次保存仍会再次加载进去错误的组件，由于找不到相关的组件就会报错。
+
 
 ## Recommended IDE Setup
 
